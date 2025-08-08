@@ -4,7 +4,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SECRET_KEY', 'change-me-in-env')  # Keep secret in Render ENV
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     'www.insuranceadvisornearme.com',
