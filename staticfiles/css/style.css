@@ -1,0 +1,787 @@
+/* Base Styles */
+:root {
+  --primary-color: #0056b3;
+  --secondary-color: #e9ecef;
+  --accent-color: #25D366;
+  --text-color: #333;
+  --light-color: #f8f9fa;
+  --dark-color: #212529;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.3rem;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+  border: 2px solid var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: #004494;
+  border-color: #004494;
+  color: white;
+}
+
+.btn-whatsapp {
+  background-color: var(--accent-color);
+  color: white;
+  border: 2px solid var(--accent-color);
+}
+
+.btn-whatsapp:hover {
+  background-color: #1da851;
+  border-color: #1da851;
+  color: white;
+}
+
+.btn-outline-primary {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(rgba(0, 86, 179, 0.9), rgba(0, 86, 179, 0.9)), url('../images/insurance-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-section .tagline {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.cta-buttons .btn {
+  margin: 0.5rem;
+}
+
+/* Service Areas */
+.service-areas {
+  padding: 3rem 0;
+  background-color: white;
+}
+
+.service-areas h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+  font-size: 2.2rem;
+}
+
+.area-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.area-card {
+  background-color: var(--light-color);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.area-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.area-card a {
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.area-card i {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+
+/* About Section */
+.about-section {
+  padding: 3rem 0;
+  background-color: var(--secondary-color);
+}
+
+.agent-photo-container {
+  position: relative;
+  max-width: 400px;
+}
+
+.visiting-card {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  border: 2px solid white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transform: rotate(5deg);
+  z-index: 1;
+}
+
+.agent-details {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.agent-details p {
+  margin-bottom: 0.75rem;
+}
+
+/* Plans Section */
+.plans-section {
+  padding: 3rem 0;
+  background-color: white;
+}
+
+.plans-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+}
+
+.plan-summary table {
+  width: 100%;
+}
+
+.plan-summary th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.plan-summary tr:nth-child(even) {
+  background-color: var(--light-color);
+}
+
+.plan-benefits {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.benefit-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.benefit-card h4 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.benefit-card ul {
+  padding-left: 20px;
+}
+
+.benefit-card li {
+  margin-bottom: 8px;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 3rem 0;
+  background-color: white;
+}
+
+.contact-methods {
+  margin-bottom: 2rem;
+}
+
+.method {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.method i {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.method h3 {
+  margin-bottom: 0.5rem;
+}
+
+.method a {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.contact-form {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 0.3rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+/* Accessibility Improvements */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+[aria-hidden="true"] {
+  aria-hidden: true;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-section .tagline {
+    font-size: 1.25rem;
+  }
+  
+  .about-section .row {
+    flex-direction: column;
+  }
+  
+  .about-section img {
+    margin-bottom: 2rem;
+  }
+  
+  .contact-section .row {
+    flex-direction: column-reverse;
+  }
+  
+  .contact-methods {
+    margin-top: 2rem;
+  }
+}
+
+ .contact-form select {
+    height: 50px !important;
+    padding: 10px 15px !important;
+    font-size: 16px !important;
+  }
+  
+  .contact-form optgroup {
+    font-size: 16px !important;
+  }
+  
+  .contact-form option {
+    font-size: 15px !important;
+    padding: 8px 10px !important;
+  }
+  
+  /* Make the form container slightly larger */
+  .contact-form {
+    padding: 25px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+/* About Section - Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  .about-section .row {
+    flex-direction: column;
+  }
+  
+  .agent-photo-container {
+    margin: 0 auto 2rem; /* Centers the container horizontally */
+    max-width: 300px; /* Slightly smaller for mobile */
+  }
+  
+  .visiting-card {
+    right: 0; /* Adjust position for smaller screens */
+    bottom: -60px; /* Slightly lower to avoid overlap */
+
+   width: 220px; 
+   height: 150px;
+  }
+  
+  .about-section .col-md-7 {
+    text-align: center; /* Center text on mobile */
+  }
+  
+  .agent-details {
+    text-align: left; /* Keep details left-aligned inside centered container */
+  }
+}
+
+@media (max-width: 768px) {
+  .agent-photo {
+    border-radius: 50%; /* Makes image circular */
+    width: 300px; /* Fixed size */
+   
+    object-fit: cover; /* Ensures image fills circle */
+    display: block;
+    margin: 0 auto; /* Centers the image */
+  }
+}
+
+/* Hero Section - Updated Styles */
+.hero-section {
+  background: #003366; /* Dark blue background */
+  color: #FFD700; /* Dark yellow text color */
+  padding: 5rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Optional: Add a subtle pattern or gradient to the dark blue */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(135deg, rgba(0,51,102,0.8) 0%, rgba(0,40,85,0.9) 100%),
+    url('../images/insurance-bg.jpg') center/cover no-repeat;
+  opacity: 0.9;
+  z-index: -1;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #FFD700; /* Dark yellow */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.hero-section .tagline {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  color: white; /* White for the tagline */
+}
+
+/* CTA Buttons - Keep WhatsApp as is, modify primary button */
+.cta-buttons .btn-primary {
+  background-color: #FFD700; /* Dark yellow */
+  color: #003366; /* Dark blue text */
+  border: 2px solid #FFD700;
+  font-weight: 600;
+}
+
+.cta-buttons .btn-primary:hover {
+  background-color: #e6c200; /* Slightly darker yellow */
+  border-color: #e6c200;
+  color: #003366;
+}
+
+/* Keep WhatsApp button exactly as is */
+.cta-buttons .btn-whatsapp {
+  background-color: #25D366;
+  color: white;
+  border: 2px solid #25D366;
+}
+
+.cta-buttons .btn-whatsapp:hover {
+  background-color: #1da851;
+  border-color: #1da851;
+  color: white;
+}
+
+/* Responsive adjustments for hero section */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 3rem 0;
+  }
+  
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-section .tagline {
+    font-size: 1.25rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cta-buttons .btn {
+    width: 80%;
+    margin: 0.5rem 0;
+  }
+}
+/* Service Areas Section - Updated without Yellow Hover */
+.service-areas {
+  padding: 4rem 0;
+  background: #f8f9fa; /* Solid light background */
+}
+
+.service-areas h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #003366; /* Dark blue */
+  font-size: 2.2rem;
+  position: relative;
+}
+
+.service-areas h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: #003366; /* Dark blue underline */
+  border-radius: 3px;
+}
+
+.area-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.area-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 51, 102, 0.08);
+  border: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+.area-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 51, 102, 0.12);
+  border-color: #003366; /* Dark blue border on hover */
+}
+
+.area-card a {
+  color: #003366;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.area-card i {
+  color: #003366; /* Dark blue icon */
+  font-size: 2rem;
+  background: rgba(0, 51, 102, 0.05);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.area-card:hover i {
+  background: rgba(0, 51, 102, 0.1); /* Slightly darker blue on hover */
+  color: #003366;
+}
+
+.area-card span {
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+/* Remove all yellow/gold color references */
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .service-areas {
+    padding: 3rem 0;
+  }
+  
+  .service-areas h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  
+  .area-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .area-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .area-card {
+    padding: 1.25rem;
+  }
+  
+  .area-card i {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+}
+
+
+/* About Section - Updated Styles */
+.about-section {
+  position: relative;
+}
+
+.visiting-card {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  border: 2px solid white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transform: rotate(5deg);
+  z-index: 1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.visiting-card:hover {
+  transform: rotate(0deg) scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* Download Button Styles */
+.btn-outline-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  border: 2px solid #003366;
+  color: #003366;
+  font-weight: 600;
+}
+
+.btn-outline-primary:hover {
+  background-color: #003366;
+  color: white;
+}
+
+/* Modal Styles */
+.modal-content {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.modal-header {
+  background-color: #003366;
+  color: white;
+  border-bottom: none;
+}
+
+.modal-title {
+  font-weight: 600;
+}
+
+.modal-footer {
+  border-top: none;
+  background-color: #f8f9fa;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .visiting-card {
+    width: 220px;
+    height: auto;
+    right: 0;
+    bottom: -60px;
+  }
+  
+  .btn-outline-primary {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* White Header Styles */
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  background: white;
+}
+
+.navbar {
+  padding: 0.8rem 0;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand span {
+  font-weight: 600;
+  margin-left: 10px;
+  font-size: 1.2rem;
+}
+
+.navbar-brand img {
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover img {
+  transform: scale(1.05);
+}
+
+.nav-link {
+  font-weight: 500;
+  padding: 0.5rem 1rem !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #0056b3 !important;
+}
+
+.dropdown-menu {
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 0.5rem 0;
+}
+
+.dropdown-item {
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+  color: #0056b3;
+}
+
+.btn-primary {
+  background-color: #0056b3;
+  border-color: #0056b3;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #004494;
+  border-color: #004494;
+  transform: translateY(-2px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .navbar-collapse {
+    padding: 1rem 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+  }
+  
+  .nav-item {
+    margin: 0.25rem 0;
+  }
+  
+  .btn-primary {
+    margin-left: 0 !important;
+    margin-top: 0.5rem;
+  }
+}
+

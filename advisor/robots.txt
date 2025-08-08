@@ -1,0 +1,6 @@
+# advisor/robots.txt
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /static/
+Sitemap: https://www.insuranceadvisornearme.com/sitemap.xml

@@ -1,0 +1,728 @@
+{
+  "lic_plans": {
+    "endowment_plans": [
+      {
+        "plan_name": "New Endowment",
+        "plan_number": 714,
+        "category": "Endowment Plan",
+        "key_features": [
+          "Combination of protection and savings",
+          "Fixed policy term with maturity benefits",
+          "Bonus additions every year",
+          "Loan facility available",
+          "Tax benefits under Section 80C & 10(10D)"
+        ],
+        "benefits": {
+          "death_benefit": "Sum assured plus bonuses paid immediately on death during policy term",
+          "maturity_benefit": "Sum assured plus accrued bonuses at end of policy term"
+        },
+        "eligibility": {
+          "min_entry_age": 12,
+          "max_entry_age": 55,
+          "min_policy_term": 12,
+          "max_policy_term": 35,
+          "min_sum_assured": 100000,
+          "premium_paying_term": "Same as policy term"
+        }
+      },
+      {
+        "plan_name": "New Jeevan Anand",
+        "plan_number": 715,
+        "category": "Endowment Plan",
+        "key_features": [
+          "Combination of protection and savings",
+          "Life cover for whole life",
+          "Bonus additions every year",
+          "Loan facility available",
+          "Tax benefits under Section 80C & 10(10D)"
+        ],
+        "benefits": {
+          "death_benefit": "Sum assured plus bonuses paid immediately on death during policy term",
+          "survival_benefit": "30% of sum assured paid at end of 15 years and another 30% at end of 20 years (for 25-year policy)",
+          "maturity_benefit": "40% of sum assured plus bonuses at end of 25 years",
+          "whole_life_cover": "Basic sum assured (without bonuses) paid on death after maturity"
+        },
+        "eligibility": {
+          "min_entry_age": 18,
+          "max_entry_age": 50,
+          "policy_term": 25,
+          "premium_paying_term": 25,
+          "min_sum_assured": 100000,
+          "max_sum_assured": "No limit (subject to underwriting)"
+        }
+      },
+      {
+        "plan_name": "Single Premium Endowment",
+        "plan_number": 717,
+        "category": "Endowment Plan",
+        "key_features": [
+          "One-time single premium payment",
+          "Fixed policy term with guaranteed returns",
+          "Life cover throughout policy term",
+          "Tax benefits under Section 80C & 10(10D)"
+        ],
+        "benefits": {
+          "death_benefit": "Sum assured plus guaranteed additions payable on death",
+          "maturity_benefit": "Sum assured plus guaranteed additions payable on survival"
+        },
+        "eligibility": {
+          "min_entry_age": 8,
+          "max_entry_age": 60,
+          "min_policy_term": 10,
+          "max_policy_term": 25,
+          "min_sum_assured": 50000
+        }
+      },
+      {
+        "plan_name": "Jeevan Lakshya",
+        "plan_number": 733,
+        "category": "Endowment Plan",
+        "key_features": [
+          "Income replacement plan",
+          "Annual income benefit during last 3 years of policy term",
+          "Lump sum payment at maturity",
+          "Waiver of premium on death of policyholder"
+        ],
+        "benefits": {
+          "death_benefit": "Sum assured plus bonuses (if any) plus return of premiums paid",
+          "survival_benefit": "10% of sum assured paid annually in last 3 policy years",
+          "maturity_benefit": "110% of sum assured plus accrued bonuses"
+        },
+        "eligibility": {
+          "min_entry_age": 18,
+          "max_entry_age": 50,
+          "policy_term": "12 to 25 years",
+          "min_sum_assured": 100000
+        }
+      },
+      {
+        "plan_name": "Jeevan Labh",
+        "plan_number": 736,
+        "category": "Endowment Plan",
+        "key_features": [
+          "Limited premium payment term",
+          "High bonus potential",
+          "Loyalty additions payable on maturity",
+          "Loan facility available"
+        ],
+        "benefits": {
+          "death_benefit": "Sum assured plus accrued bonuses",
+          "maturity_benefit": "Sum assured plus accrued bonuses plus loyalty additions"
+        },
+        "eligibility": {
+          "min_entry_age": 18,
+          "max_entry_age": 59,
+          "policy_term": "16, 21 or 25 years",
+          "premium_paying_term": "10, 15 or 16 years respectively"
+        }
+      },
+      {
+        "plan_name": "Bima Jyoti",
+        "plan_number": 760,
+        "category": "Endowment Plan",
+        "key_features": [
+          "Guaranteed additions payable every year",
+          "Simple product with guaranteed benefits",
+          "Limited premium payment term",
+          "Loyalty addition at maturity"
+        ],
+        "benefits": {
+          "death_benefit": "Sum assured plus guaranteed additions",
+          "maturity_benefit": "Basic sum assured plus guaranteed additions plus loyalty addition"
+        },
+        "eligibility": {
+          "min_entry_age": 90,
+          "max_entry_age": 60,
+          "policy_term": "15 to 20 years",
+          "premium_paying_term": "10 years"
+        }
+      },
+      {
+        "plan_name": "Jeevan Azad",
+        "plan_number": 768,
+        "category": "Endowment Plan",
+        "key_features": [
+          "Limited premium payment term",
+          "Guaranteed additions throughout policy term",
+          "Loyalty additions at maturity",
+          "Simple and transparent product"
+        ],
+        "benefits": {
+          "death_benefit": "Sum assured plus guaranteed additions",
+          "maturity_benefit": "Basic sum assured plus guaranteed additions plus loyalty addition"
+        },
+        "eligibility": {
+          "min_entry_age": 8,
+          "max_entry_age": 55,
+          "policy_term": 15,
+          "premium_paying_term": 10
+        }
+      },
+      {
+        "plan_name": "Nav Jeevan Shree (Single Premium)",
+        "plan_number": 911,
+        "category": "Endowment Plan",
+        "key_features": [
+          "Single premium endowment plan",
+          "Guaranteed additions throughout policy term",
+          "Loyalty additions at maturity",
+          "Simple and transparent product"
+        ],
+        "benefits": {
+          "death_benefit": "Sum assured plus guaranteed additions",
+          "maturity_benefit": "Basic sum assured plus guaranteed additions plus loyalty addition"
+        },
+        "eligibility": {
+          "min_entry_age": 8,
+          "max_entry_age": 60,
+          "policy_term": "10 to 20 years"
+        }
+      },
+      {
+        "plan_name": "Nav Jeevan Shree (Limited Premium)",
+        "plan_number": 912,
+        "category": "Endowment Plan",
+        "key_features": [
+          "Limited premium payment term",
+          "Guaranteed additions throughout policy term",
+          "Loyalty additions at maturity",
+          "Simple and transparent product"
+        ],
+        "benefits": {
+          "death_benefit": "Sum assured plus guaranteed additions",
+          "maturity_benefit": "Basic sum assured plus guaranteed additions plus loyalty addition"
+        },
+        "eligibility": {
+          "min_entry_age": 8,
+          "max_entry_age": 60,
+          "policy_term": "10 to 20 years",
+          "premium_paying_term": "5 or 7 years"
+        }
+      }
+    ],
+    "moneyback_plans": [
+      {
+        "plan_name": "MoneyBack (20 Year)",
+        "plan_number": 720,
+        "category": "MoneyBack Plan",
+        "key_features": [
+          "Survival benefits at regular intervals",
+          "Maturity benefit at end of policy term",
+          "Death benefit throughout policy term",
+          "Bonus additions every year"
+        ],
+        "benefits": {
+          "survival_benefit": "20% of sum assured after 5, 10, 15 years",
+          "maturity_benefit": "40% of sum assured plus bonuses at end of 20 years",
+          "death_benefit": "Full sum assured plus bonuses (without deducting survival benefits)"
+        },
+        "eligibility": {
+          "min_entry_age": 13,
+          "max_entry_age": 50,
+          "policy_term": 20,
+          "min_sum_assured": 100000
+        }
+      },
+      {
+        "plan_name": "MoneyBack (25 Year)",
+        "plan_number": 721,
+        "category": "MoneyBack Plan",
+        "key_features": [
+          "Survival benefits at regular intervals",
+          "Maturity benefit at end of policy term",
+          "Death benefit throughout policy term",
+          "Bonus additions every year"
+        ],
+        "benefits": {
+          "survival_benefit": "15% of sum assured after 5, 10, 15, 20 years",
+          "maturity_benefit": "40% of sum assured plus bonuses at end of 25 years",
+          "death_benefit": "Full sum assured plus bonuses (without deducting survival benefits)"
+        },
+        "eligibility": {
+          "min_entry_age": 13,
+          "max_entry_age": 50,
+          "policy_term": 25,
+          "min_sum_assured": 100000
+        }
+      },
+      {
+        "plan_name": "Bima Shree",
+        "plan_number": 748,
+        "category": "MoneyBack Plan",
+        "key_features": [
+          "Limited premium payment term",
+          "Money back benefits during policy term",
+          "Loyalty additions at maturity",
+          "High sum assured rebate"
+        ],
+        "benefits": {
+          "survival_benefit": "30% of sum assured after 15 years and another 30% after 20 years",
+          "maturity_benefit": "40% of sum assured plus loyalty additions after 25 years",
+          "death_benefit": "Sum assured plus loyalty additions (if any)"
+        },
+        "eligibility": {
+          "min_entry_age": 18,
+          "max_entry_age": 55,
+          "policy_term": 25,
+          "premium_paying_term": 12
+        }
+      },
+      {
+        "plan_name": "Bima Ratna",
+        "plan_number": 764,
+        "category": "MoneyBack Plan",
+        "key_features": [
+          "Limited premium payment term",
+          "Money back benefits during policy term",
+          "Guaranteed additions throughout policy term",
+          "Loyalty additions at maturity"
+        ],
+        "benefits": {
+          "survival_benefit": "30% of sum assured after 15 years",
+          "maturity_benefit": "70% of sum assured plus guaranteed additions plus loyalty additions after 20 years",
+          "death_benefit": "Sum assured plus guaranteed additions plus loyalty additions (if any)"
+        },
+        "eligibility": {
+          "min_entry_age": 8,
+          "max_entry_age": 55,
+          "policy_term": 20,
+          "premium_paying_term": 12
+        }
+      }
+    ],
+    "wholelife_plans": [
+      {
+        "plan_name": "Jeevan Umang",
+        "plan_number": 745,
+        "category": "Whole Life Plan",
+        "key_features": [
+          "Whole life coverage with limited premium payment",
+          "Annual survival benefits after premium payment term",
+          "Maturity benefit at age 100",
+          "Bonus additions every year"
+        ],
+        "benefits": {
+          "survival_benefit": "8% of sum assured annually after premium payment term till age 99",
+          "maturity_benefit": "Sum assured plus bonuses plus final additional bonus at age 100",
+          "death_benefit": "Sum assured plus bonuses plus final additional bonus"
+        },
+        "eligibility": {
+          "min_entry_age": 90,
+          "max_entry_age": 55,
+          "premium_paying_term": "15, 20, 25 or 30 years",
+          "min_sum_assured": 200000
+        }
+      },
+      {
+        "plan_name": "Jeevan Utsav",
+        "plan_number": 771,
+        "category": "Whole Life Plan",
+        "key_features": [
+          "Whole life coverage with return of premiums",
+          "Flexible premium payment terms",
+          "Survival benefits from end of premium payment term",
+          "Bonus additions every year"
+        ],
+        "benefits": {
+          "survival_benefit": "30% of sum assured every 3 years from end of premium payment term",
+          "maturity_benefit": "Sum assured plus bonuses at age 100",
+          "death_benefit": "Sum assured plus bonuses plus return of total premiums paid"
+        },
+        "eligibility": {
+          "min_entry_age": 30,
+          "max_entry_age": 60,
+          "premium_paying_term": "10, 15 or 20 years",
+          "min_sum_assured": 300000
+        }
+      }
+    ],
+    "child_plans": [
+      {
+        "plan_name": "Child Money Back",
+        "plan_number": 732,
+        "category": "Child Plan",
+        "key_features": [
+          "Specifically designed for children's future needs",
+          "Money back benefits at different educational stages",
+          "Waiver of premium on death of proposer",
+          "Bonus additions every year"
+        ],
+        "benefits": {
+          "survival_benefit": "20% of sum assured at ages 18, 20 & 22 years",
+          "maturity_benefit": "40% of sum assured plus bonuses at age 25 years",
+          "death_benefit": "Sum assured plus bonuses (without deducting survival benefits)"
+        },
+        "eligibility": {
+          "child_min_age": 0,
+          "child_max_age": 12,
+          "policy_term": "(25 - age at entry) years",
+          "min_sum_assured": 100000
+        }
+      },
+      {
+        "plan_name": "Jeevan Tarun",
+        "plan_number": 734,
+        "category": "Child Plan",
+        "key_features": [
+          "Money back plan for children",
+          "Benefits payable at important educational stages",
+          "Waiver of premium on death of proposer",
+          "Bonus additions every year"
+        ],
+        "benefits": {
+          "survival_benefit": "15% of sum assured at ages 20, 21, 22 & 23 years",
+          "maturity_benefit": "40% of sum assured plus bonuses at age 25 years",
+          "death_benefit": "Sum assured plus bonuses (without deducting survival benefits)"
+        },
+        "eligibility": {
+          "child_min_age": 0,
+          "child_max_age": 12,
+          "policy_term": "(25 - age at entry) years",
+          "min_sum_assured": 75000
+        }
+      },
+      {
+        "plan_name": "Amritbaal",
+        "plan_number": 774,
+        "category": "Child Plan",
+        "key_features": [
+          "Non-linked participating plan",
+          "Limited premium payment term",
+          "Waiver of premium on death of proposer",
+          "Loyalty additions at maturity"
+        ],
+        "benefits": {
+          "maturity_benefit": "Sum assured plus loyalty additions",
+          "death_benefit": "Sum assured plus loyalty additions (if any)"
+        },
+        "eligibility": {
+          "child_min_age": 0,
+          "child_max_age": 13,
+          "policy_term": "20 to 25 years",
+          "premium_paying_term": "10 years"
+        }
+      }
+    ],
+    "term_plans": [
+      {
+        "plan_name": "Saral Jeevan Bima",
+        "plan_number": 859,
+        "category": "Term Plan",
+        "key_features": [
+          "Pure term insurance plan",
+          "Simple product with no complexities",
+          "Option to increase sum assured by 25% at certain life stages",
+          "No medical examination required for smaller sums assured"
+        ],
+        "benefits": {
+          "death_benefit": "Sum assured payable on death during policy term"
+        },
+        "eligibility": {
+          "min_entry_age": 18,
+          "max_entry_age": 65,
+          "min_policy_term": 5,
+          "max_policy_term": 40,
+          "min_sum_assured": 500000,
+          "max_sum_assured": 2500000
+        }
+      },
+      {
+        "plan_name": "Yuva Term",
+        "plan_number": 875,
+        "category": "Term Plan",
+        "key_features": [
+          "Designed for young individuals",
+          "Option to increase cover at important life stages",
+          "Flexible premium payment options",
+          "Return of premium option available"
+        ],
+        "benefits": {
+          "death_benefit": "Sum assured payable on death during policy term",
+          "return_of_premium": "Option to get 100% of premiums back at maturity (if selected)"
+        },
+        "eligibility": {
+          "min_entry_age": 18,
+          "max_entry_age": 40,
+          "min_policy_term": 10,
+          "max_policy_term": 40,
+          "min_sum_assured": 500000
+        }
+      },
+      {
+        "plan_name": "Yuva Credit Life",
+        "plan_number": 877,
+        "category": "Term Plan",
+        "key_features": [
+          "Designed to cover loans and liabilities",
+          "Decreasing term cover option available",
+          "Flexible premium payment options",
+          "Joint life cover option available"
+        ],
+        "benefits": {
+          "death_benefit": "Sum assured payable to nominee to clear outstanding debts"
+        },
+        "eligibility": {
+          "min_entry_age": 18,
+          "max_entry_age": 50,
+          "min_policy_term": 5,
+          "max_policy_term": 35,
+          "min_sum_assured": 500000
+        }
+      },
+      {
+        "plan_name": "New Jeevan Amar",
+        "plan_number": 955,
+        "category": "Term Plan",
+        "key_features": [
+          "Level or increasing cover options",
+          "Option to choose sum assured payment mode (lump sum or monthly income)",
+          "Flexible policy terms",
+          "Option to convert to whole life policy"
+        ],
+        "benefits": {
+          "death_benefit": "Sum assured payable as lump sum or monthly income (as chosen)"
+        },
+        "eligibility": {
+          "min_entry_age": 18,
+          "max_entry_age": 65,
+          "min_policy_term": 10,
+          "max_policy_term": 40,
+          "min_sum_assured": 500000
+        }
+      }
+    ],
+    "pension_plans": [
+      {
+        "plan_name": "New Jeevan Shanti",
+        "plan_number": 758,
+        "category": "Pension Plan",
+        "key_features": [
+          "Immediate or deferred annuity options",
+          "Flexible annuity payout options",
+          "Joint life annuity option available",
+          "Loan facility available after 3 months"
+        ],
+        "benefits": {
+          "annuity_options": [
+            "Life annuity with return of purchase price",
+            "Joint life annuity with last survivor option",
+            "Annuity increasing at 3% p.a.",
+            "Annuity payable for 5,10,15 or 20 years certain"
+          ]
+        },
+        "eligibility": {
+          "min_entry_age": 30,
+          "max_entry_age": 79,
+          "min_purchase_price": 150000,
+          "max_purchase_price": "No limit"
+        }
+      },
+      {
+        "plan_name": "Saral Pension",
+        "plan_number": 862,
+        "category": "Pension Plan",
+        "key_features": [
+          "Simple and transparent annuity product",
+          "Immediate annuity options only",
+          "No medical examination required",
+          "Guaranteed annuity rates"
+        ],
+        "benefits": {
+          "annuity_options": [
+            "Life annuity",
+            "Life annuity with return of purchase price",
+            "Joint life annuity with last survivor option"
+          ]
+        },
+        "eligibility": {
+          "min_entry_age": 40,
+          "max_entry_age": 80,
+          "min_purchase_price": 300000,
+          "max_purchase_price": "No limit"
+        }
+      },
+      {
+        "plan_name": "Jeevan Akshay-VII",
+        "plan_number": 857,
+        "category": "Pension Plan",
+        "key_features": [
+          "Immediate annuity plan",
+          "Multiple annuity payout options",
+          "Purchase price returned on death under some options",
+          "Annuity rates guaranteed at policy inception"
+        ],
+        "benefits": {
+          "annuity_options": [
+            "Life annuity",
+            "Life annuity with return of purchase price",
+            "Joint life annuity with last survivor option",
+            "Annuity certain for 5,10,15 or 20 years"
+          ]
+        },
+        "eligibility": {
+          "min_entry_age": 30,
+          "max_entry_age": 85,
+          "min_purchase_price": 100000,
+          "max_purchase_price": "No limit"
+        }
+      },
+      {
+        "plan_name": "Smart Pension",
+        "plan_number": 879,
+        "category": "Pension Plan",
+        "key_features": [
+          "Flexible premium payment options",
+          "Option to commute up to 60% of corpus at vesting",
+          "Multiple annuity options at vesting",
+          "Life cover during accumulation period"
+        ],
+        "benefits": {
+          "vesting_benefit": "Option to commute up to 60% of fund value and use balance to buy annuity",
+          "death_benefit": "Sum assured or fund value, whichever is higher"
+        },
+        "eligibility": {
+          "min_entry_age": 18,
+          "max_entry_age": 65,
+          "vesting_age": 40,
+          "max_vesting_age": 75,
+          "min_yearly_premium": 10000
+        }
+      }
+    ],
+    "ulip_plans": [
+      {
+        "plan_name": "Endowment Plus",
+        "plan_number": 735,
+        "category": "ULIP Plan",
+        "key_features": [
+          "Combination of protection and investment",
+          "Multiple fund options to choose from",
+          "Partial withdrawal facility after 5 years",
+          "Loyalty additions at maturity"
+        ],
+        "benefits": {
+          "death_benefit": "Sum assured or fund value, whichever is higher",
+          "maturity_benefit": "Fund value plus loyalty additions"
+        },
+        "eligibility": {
+          "min_entry_age": 18,
+          "max_entry_age": 65,
+          "min_policy_term": 10,
+          "max_policy_term": 25,
+          "min_sum_assured": 100000
+        }
+      },
+      {
+        "plan_name": "Nivesh Plus",
+        "plan_number": 749,
+        "category": "ULIP Plan",
+        "key_features": [
+          "Investment-oriented plan",
+          "Multiple fund options with switching facility",
+          "Partial withdrawal after 5 years",
+          "Top-up premium facility available"
+        ],
+        "benefits": {
+          "death_benefit": "Sum assured or fund value, whichever is higher",
+          "maturity_benefit": "Fund value"
+        },
+        "eligibility": {
+          "min_entry_age": 18,
+          "max_entry_age": 65,
+          "min_policy_term": 10,
+          "max_policy_term": 25,
+          "min_sum_assured": 100000
+        }
+      },
+      {
+        "plan_name": "SIIP",
+        "plan_number": 752,
+        "category": "ULIP Plan",
+        "key_features": [
+          "Systematic investment plan",
+          "Flexible premium payment options",
+          "Multiple fund options with auto-balancing",
+          "Partial withdrawal after 5 years"
+        ],
+        "benefits": {
+          "death_benefit": "Sum assured or fund value, whichever is higher",
+          "maturity_benefit": "Fund value"
+        },
+        "eligibility": {
+          "min_entry_age": 18,
+          "max_entry_age": 65,
+          "min_policy_term": 10,
+          "max_policy_term": 25,
+          "min_sum_assured": 100000
+        }
+      },
+      {
+        "plan_name": "New Pension Plus",
+        "plan_number": 867,
+        "category": "ULIP Plan",
+        "key_features": [
+          "Pension cum investment plan",
+          "Option to commute up to 60% of corpus at vesting",
+          "Multiple annuity options at vesting",
+          "Life cover during accumulation period"
+        ],
+        "benefits": {
+          "vesting_benefit": "Option to commute up to 60% of fund value and use balance to buy annuity",
+          "death_benefit": "Sum assured or fund value, whichever is higher"
+        },
+        "eligibility": {
+          "min_entry_age": 18,
+          "max_entry_age": 65,
+          "vesting_age": 40,
+          "max_vesting_age": 75,
+          "min_yearly_premium": 10000
+        }
+      },
+      {
+        "plan_name": "Index Plus",
+        "plan_number": 873,
+        "category": "ULIP Plan",
+        "key_features": [
+          "Links returns to selected stock market indices",
+          "Capital protection feature",
+          "Option to lock-in gains periodically",
+          "Partial withdrawal after 5 years"
+        ],
+        "benefits": {
+          "death_benefit": "Sum assured or fund value, whichever is higher",
+          "maturity_benefit": "Fund value with capital protection"
+        },
+        "eligibility": {
+          "min_entry_age": 18,
+          "max_entry_age": 65,
+          "min_policy_term": 10,
+          "max_policy_term": 20,
+          "min_sum_assured": 100000
+        }
+      }
+    ],
+    "micro_insurance_plans": [
+      {
+        "plan_name": "Micro Bachat",
+        "plan_number": 751,
+        "category": "Micro Insurance Plan",
+        "key_features": [
+          "Affordable insurance for low-income groups",
+          "Fixed policy term with maturity benefits",
+          "Simplified underwriting",
+          "Small sum assured options"
+        ],
+        "benefits": {
+          "death_benefit": "Sum assured payable on death during policy term",
+          "maturity_benefit": "Sum assured payable on survival to maturity"
+        },
+        "eligibility": {
+          "min_entry_age": 18,
+          "max_entry_age": 60,
+          "policy_term": 5,
+          "sum_assured_options": [30000, 50000, 75000]
+        }
+      }
+    ]
+  }
+}

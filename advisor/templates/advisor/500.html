@@ -1,0 +1,21 @@
+{% extends "advisor/base.html" %}
+{% load static %}
+
+{% block title %}Server Error | LIC Insurance Advisor{% endblock %}
+
+{% block content %}
+<div class="container py-5 text-center">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <img src="{% static 'images/500-error.png' %}" alt="500 Error" class="img-fluid mb-4" style="max-height: 300px;">
+            <h1 class="text-danger">Server Error</h1>
+            <p class="lead">Something went wrong on our end. We're working to fix it!</p>
+            <p>Please try again later or contact us if the problem persists.</p>
+            <div class="d-flex justify-content-center gap-3 mt-4">
+                <a href="{% url 'home' %}" class="btn btn-primary">Home Page</a>
+                <a href="{% url 'contact' %}" class="btn btn-outline-primary">Contact Support</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

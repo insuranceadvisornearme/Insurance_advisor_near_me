@@ -1,0 +1,74 @@
+{% load static %}
+<!-- Google Fonts -->
+ <link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<!-- Primary Meta Tags -->
+<title>{{ meta.title }}</title>
+<meta name="description" content="{{ meta.description }}">
+<meta name="keywords" content="{{ meta.keywords }}">
+
+<!-- Schema.org for Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "{{ meta.local_business.name }}",
+  "image": "https://www.insurance-advisor-near-me.com/static/images/avinash-chauhan.jpg",
+  "@id": "",
+  "url": "https://www.insurance-advisor-near-me.com",
+  "telephone": "{{ meta.local_business.phone }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{ meta.local_business.address.street }}",
+    "addressLocality": "{{ meta.local_business.address.locality }}",
+    "addressRegion": "{{ meta.local_business.address.region }}",
+    "postalCode": "{{ meta.local_business.address.postal_code }}",
+    "addressCountry": "{{ meta.local_business.address.country }}"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": {{ meta.local_business.geo.latitude }},
+    "longitude": {{ meta.local_business.geo.longitude }}
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "opens": "09:00",
+    "closes": "18:00"
+  },
+  "priceRange": "$$"
+}
+</script>
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.insurance-advisor-near-me.com/">
+<meta property="og:title" content="{{ meta.title }}">
+<meta property="og:description" content="{{ meta.description }}">
+<meta property="og:image" content="https://www.insurance-advisor-near-me.com/static/images/avinash-chauhan.jpg">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://www.insurance-advisor-near-me.com/">
+<meta property="twitter:title" content="{{ meta.title }}">
+<meta property="twitter:description" content="{{ meta.description }}">
+<meta property="twitter:image" content="https://www.insurance-advisor-near-me.com/static/images/avinash-chauhan.jpg">
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="canonical" href="https://www.insurance-advisor-near-me.com/">

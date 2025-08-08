@@ -1,0 +1,326 @@
+{% extends "advisor/base.html" %}
+{% load static %}
+
+{% block title %}LIC Plan Details - Compare All LIC Insurance Plans{% endblock %}
+<meta name="description" content="Compare all LIC insurance plans with detailed features, benefits, eligibility criteria. View New Jeevan Anand, Jeevan Lakshya, Term plans and more.">
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="container">
+    <h1>LIC Insurance Advisor</h1>
+    <p class="tagline">Zindagi ke saath bhi, Zindagi ke baad bhi</p>
+  </div>
+</section>
+
+<div class="container mt-4">
+    <!-- Plan Selection Section -->
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <label for="category-select" class="form-label">Select Category</label>
+            <select class="form-select" id="category-select">
+                <option value="">-- Select Category --</option>
+                <option value="endowment_plans">Endowment Plans</option>
+                <option value="moneyback_plans">Moneyback Plans</option>
+                <option value="wholelife_plans">Whole Life Plans</option>
+                <option value="child_plans">Child Plans</option>
+                <option value="term_plans">Term Plans</option>
+                <option value="pension_plans">Pension Plans</option>
+                <option value="ulip_plans">ULIP Plans</option>
+                <option value="micro_insurance_plans">Micro Insurance Plans</option>
+            </select>
+        </div>
+        <div class="col-md-4">
+            <label for="plan-select" class="form-label">Select Plan</label>
+            <select class="form-select" id="plan-select" disabled>
+                <option value="">-- Select a Category First --</option>
+            </select>
+        </div>
+        <div class="col-md-4 d-flex align-items-end">
+            <button id="view-plan-btn" class="btn btn-primary" disabled>View Plan Details</button>
+        </div>
+    </div>
+
+    <!-- Plan Details Section -->
+    <div id="plan-details" class="card d-none">
+        <div class="card-header bg-primary text-white">
+            <h3 id="plan-title" class="mb-0"></h3>
+        </div>
+        <div class="card-body">
+            <!-- Basic Info Row -->
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <p class="mb-1"><strong>Plan Number:</strong> <span id="plan-number"></span></p>
+                    <p class="mb-1"><strong>Category:</strong> <span id="plan-category"></span></p>
+                </div>
+            </div>
+
+            <!-- Key Features Section -->
+            <div class="mb-4">
+                <h4 class="border-bottom pb-2">Key Features</h4>
+                <ul id="key-features" class="list-group list-group-flush"></ul>
+            </div>
+
+            <!-- Benefits Section -->
+            <div class="mb-4">
+                <h4 class="border-bottom pb-2">Benefits</h4>
+                <div id="benefits" class="row"></div>
+            </div>
+
+            <!-- Eligibility Section -->
+            <div class="mb-4">
+                <h4 class="border-bottom pb-2">Eligibility Conditions</h4>
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <tbody id="eligibility-conditions"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- About Section -->
+<section class="about-section py-5" aria-label="About Avinash Chauhan">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-5">
+                <div class="agent-photo-container">
+                    <img src="{% static 'images/lic-advisor-avinash-chauhan.png' %}" 
+                         alt="Avinash Chauhan - LIC Agent" 
+                         class="img-fluid rounded shadow agent-photo"
+                         loading="lazy"
+                         width="400"
+                         height="500">
+                </div>
+            </div>
+            <div class="col-md-7">
+                <h2>Avinash Chauhan</h2>
+                <p class="lead">Certified LIC Agent <b>(Code: 02927-91N)</b></p>
+                <div class="agent-details">
+                    <p><strong>Service Areas:</strong> Virar, Vasai, Nallasopara, Naigaon, Bhayandar, Mira Road, Dahisar, Borivali</p>
+                    <p><strong>Specialization:</strong> Endowment Plans, Money Back Policies, Child Plans, Term Insurance</p>
+                    <p><strong>Policies Serviced:</strong> 500+ happy clients</p>
+                    <p><strong>Languages:</strong> English, Hindi, Marathi</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .hero-section {
+        background: linear-gradient(135deg, #0066b3 0%, #003366 100%);
+        color: white;
+        padding: 80px 0;
+        text-align: center;
+    }
+    .hero-section h1 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        font-weight: 700;
+    }
+    .tagline {
+        font-size: 1.5rem;
+        font-style: italic;
+        margin-bottom: 0;
+    }
+    .card {
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .list-group-item {
+        border-left: none;
+        border-right: none;
+    }
+    .benefit-card {
+        border-left: 4px solid #0d6efd;
+        margin-bottom: 15px;
+        padding: 15px;
+        background-color: #f8f9fa;
+        border-radius: 4px;
+    }
+    .benefit-card h5 {
+        color: #0d6efd;
+    }
+    #plan-details {
+        animation: fadeIn 0.5s ease-in-out;
+    }
+    .contact-form {
+        background: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .contact-section {
+        background-color: #f8f9fa;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const categorySelect = document.getElementById('category-select');
+    const planSelect = document.getElementById('plan-select');
+    const viewPlanBtn = document.getElementById('view-plan-btn');
+    const planDetails = document.getElementById('plan-details');
+    const planInterestSelect = document.getElementById('plan_interest');
+    let plansData = {};
+
+    // Fetch JSON data
+    fetch("{% static 'json/lic-plans.json' %}")
+        .then(response => response.json())
+        .then(data => {
+            plansData = data.lic_plans;
+            console.log('Data loaded successfully');
+            populatePlanInterestDropdown();
+        })
+        .catch(error => console.error('Error loading JSON:', error));
+
+    // Populate plan interest dropdown
+    function populatePlanInterestDropdown() {
+        // Clear existing options except the first one
+        while (planInterestSelect.options.length > 1) {
+            planInterestSelect.remove(1);
+        }
+
+        // Add plans from all categories
+        for (const [category, plans] of Object.entries(plansData)) {
+            const categoryName = category.split('_').map(word => 
+                word.charAt(0).toUpperCase() + word.slice(1)
+            ).join(' ').replace('Plans', '').trim();
+            
+            const optgroup = document.createElement('optgroup');
+            optgroup.label = `${categoryName} Plans`;
+            
+            plans.forEach(plan => {
+                const option = document.createElement('option');
+                option.value = `${plan.plan_number} - ${plan.plan_name}`;
+                option.textContent = `${plan.plan_number} - ${plan.plan_name}`;
+                optgroup.appendChild(option);
+            });
+            
+            planInterestSelect.appendChild(optgroup);
+        }
+    }
+
+    // Category selection handler
+    categorySelect.addEventListener('change', function() {
+        const category = this.value;
+        planSelect.innerHTML = '<option value="">-- Select Plan --</option>';
+        planSelect.disabled = !category;
+        viewPlanBtn.disabled = true;
+
+        if (category) {
+            const categoryPlans = plansData[category];
+            if (categoryPlans) {
+                categoryPlans.forEach(plan => {
+                    const option = document.createElement('option');
+                    option.value = plan.plan_number;
+                    option.textContent = `${plan.plan_number} - ${plan.plan_name}`;
+                    planSelect.appendChild(option);
+                });
+            }
+        }
+    });
+
+    // Plan selection handler
+    planSelect.addEventListener('change', function() {
+        viewPlanBtn.disabled = !this.value;
+    });
+
+    // View Plan button handler
+    viewPlanBtn.addEventListener('click', function() {
+        const category = categorySelect.value;
+        const planNumber = planSelect.value;
+        
+        if (category && planNumber) {
+            const selectedPlan = plansData[category].find(plan => plan.plan_number == planNumber);
+            if (selectedPlan) {
+                displayPlanDetails(selectedPlan);
+            }
+        }
+    });
+
+    // Function to display plan details
+    function displayPlanDetails(plan) {
+        // Set basic info
+        document.getElementById('plan-title').textContent = `${plan.plan_name} (${plan.plan_number})`;
+        document.getElementById('plan-number').textContent = plan.plan_number;
+        document.getElementById('plan-category').textContent = plan.category;
+
+        // Set key features
+        const keyFeaturesList = document.getElementById('key-features');
+        keyFeaturesList.innerHTML = '';
+        if (plan.key_features && plan.key_features.length > 0) {
+            plan.key_features.forEach(feature => {
+                const li = document.createElement('li');
+                li.className = 'list-group-item';
+                li.textContent = feature;
+                keyFeaturesList.appendChild(li);
+            });
+        }
+
+        // Set benefits
+        const benefitsContainer = document.getElementById('benefits');
+        benefitsContainer.innerHTML = '';
+        
+        if (plan.benefits) {
+            for (const [benefitType, benefitDesc] of Object.entries(plan.benefits)) {
+                if (benefitDesc) {
+                    const benefitCol = document.createElement('div');
+                    benefitCol.className = 'col-md-6';
+                    
+                    const benefitCard = document.createElement('div');
+                    benefitCard.className = 'benefit-card p-3';
+                    
+                    const benefitTitle = document.createElement('h5');
+                    benefitTitle.className = 'mb-2';
+                    benefitTitle.textContent = benefitType.split('_').map(word => 
+                        word.charAt(0).toUpperCase() + word.slice(1)
+                    ).join(' ');
+                    
+                    const benefitText = document.createElement('p');
+                    benefitText.className = 'mb-0';
+                    benefitText.textContent = benefitDesc;
+                    
+                    benefitCard.appendChild(benefitTitle);
+                    benefitCard.appendChild(benefitText);
+                    benefitCol.appendChild(benefitCard);
+                    benefitsContainer.appendChild(benefitCol);
+                }
+            }
+        }
+
+        // Set eligibility conditions
+        const eligibilityTable = document.getElementById('eligibility-conditions');
+        eligibilityTable.innerHTML = '';
+        
+        if (plan.eligibility) {
+            for (const [condition, value] of Object.entries(plan.eligibility)) {
+                const row = document.createElement('tr');
+                
+                const conditionCell = document.createElement('td');
+                conditionCell.style.width = '40%';
+                conditionCell.textContent = condition.split('_').map(word => 
+                    word.charAt(0).toUpperCase() + word.slice(1)
+                ).join(' ');
+                
+                const valueCell = document.createElement('td');
+                valueCell.textContent = value;
+                
+                row.appendChild(conditionCell);
+                row.appendChild(valueCell);
+                eligibilityTable.appendChild(row);
+            }
+        }
+
+        // Show the plan details section
+        planDetails.classList.remove('d-none');
+    }
+});
+</script>
+{% endblock %}

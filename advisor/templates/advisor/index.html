@@ -1,0 +1,392 @@
+{% extends "advisor/base.html" %}
+{% load static %}
+
+{% block title %}LIC Agent in {{ location|default:"Virar, Vasai, Mumbai" }} | Avinash Chauhan (Code: 02927-91N){% endblock %}
+
+{% block meta %}
+<meta name="description" content="LIC Agent Avinash Chauhan (Code: 02927-91N) serving Virar, Vasai, Mumbai area. Get expert advice on LIC policies, money back plans, term insurance & child plans. Call +91 7620485529">
+<meta name="keywords" content="LIC Agent, LIC Advisor, LIC Policies, Life Insurance, Virar LIC Agent, Vasai LIC Agent, Mumbai LIC Agent, Money Back Policy, Term Insurance, Child Plans, Pension Plans">
+<meta name="author" content="Avinash Chauhan">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ request.build_absolute_uri }}">
+<meta property="og:title" content="LIC Agent in {{ location|default:"Virar, Vasai, Mumbai" }} | Avinash Chauhan">
+<meta property="og:description" content="Expert LIC Agent serving Virar, Vasai, Mumbai area. Get advice on LIC policies, money back plans, term insurance & child plans. Call +91 7620485529">
+<meta property="og:image" content="{% static 'images/lic-advisor-avinash-chauhan.png' %}">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="{{ request.build_absolute_uri }}">
+<meta property="twitter:title" content="LIC Agent in {{ location|default:"Virar, Vasai, Mumbai" }} | Avinash Chauhan">
+<meta property="twitter:description" content="Expert LIC Agent serving Virar, Vasai, Mumbai area. Get advice on LIC policies, money back plans, term insurance & child plans. Call +91 7620485529">
+<meta property="twitter:image" content="{% static 'images/lic-advisor-avinash-chauhan.png' %}">
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="container">
+    <h1>LIC Insurance Advisor in {{ location|default:"Virar, Vasai, Mumbai" }}</h1>
+    <p class="tagline">Zindagi ke saath bhi, Zindagi ke baad bhi</p>
+    <div class="cta-buttons">
+      <a href="tel:+917620485529" class="btn btn-primary">
+        <i class="fas fa-phone"></i> Call Now: +91 7620485529
+      </a>
+      <a href="https://wa.me/917620485529" class="btn btn-whatsapp">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Service Areas -->
+<section class="service-areas py-5" aria-label="Service Areas">
+  <div class="container">
+    <h2 class="text-center mb-5">Areas I Serve</h2>
+    <div class="area-grid">
+      <div class="area-card">
+        <a href="/lic-agent-virar/" aria-label="LIC Agent in Virar">
+          <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+          <span>LIC Agent in Virar</span>
+        </a>
+      </div>
+      <div class="area-card">
+        <a href="/lic-agent-vasai/" aria-label="LIC Agent in Vasai">
+          <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+          <span>LIC Agent in Vasai</span>
+        </a>
+      </div>
+      <div class="area-card">
+        <a href="/lic-agent-nallasopara/" aria-label="LIC Agent in Nallasopara">
+          <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+          <span>LIC Agent in Nallasopara</span>
+        </a>
+      </div>
+      <div class="area-card">
+        <a href="/lic-agent-naigaon/" aria-label="LIC Agent in Naigaon">
+          <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+          <span>LIC Agent in Naigaon</span>
+        </a>
+      </div>
+      <div class="area-card">
+        <a href="/lic-agent-bhayandar/" aria-label="LIC Agent in Bhayandar">
+          <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+          <span>LIC Agent in Bhayandar</span>
+        </a>
+      </div>
+      <div class="area-card">
+        <a href="/lic-agent-mira-road/" aria-label="LIC Agent in Mira Road">
+          <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+          <span>LIC Agent in Mira Road</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- About Section -->
+<section class="about-section py-5 bg-light" aria-label="About Avinash Chauhan">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-5">
+        <div class="agent-photo-container">
+          <img src="{% static 'images/lic-advisor-avinash-chauhan.png' %}" 
+               alt="Avinash Chauhan - LIC Agent" 
+               class="img-fluid rounded shadow agent-photo"
+               loading="lazy"
+               width="400"
+               height="500">
+          <img src="{% static 'images/lic-agent-card.png' %}"
+               alt="LIC Agent Visiting Card"
+               class="visiting-card"
+               loading="lazy"
+               width="300"
+               height="180"
+               data-bs-toggle="modal" 
+               data-bs-target="#visitingCardModal">
+        </div>
+      </div>
+      <div class="col-md-7">
+        <h2>Avinash Chauhan</h2>
+        <p class="lead">Certified LIC Agent <b>(Code: 02927-91N) </b> </p>
+        <div class="agent-details">
+          <p><strong>Service Areas:</strong> Virar, Vasai, Nallasopara, Naigaon, Bhayandar, Mira Road, Dahisar, Borivali</p>
+          <p><strong>Specialization:</strong> Endowment Plans, Money Back Policies, Child Plans, Term Insurance</p>
+          <p><strong>Policies Serviced:</strong> 500+ happy clients</p>
+          <p><strong>Languages:</strong> English, Hindi, Marathi</p>
+        </div>
+        <!-- Download Visiting Card Button -->
+        <a href="{% static 'images/lic-agent-card.png' %}" 
+           class="btn btn-outline-primary"
+           download="LIC-Agent-Avinash-Chauhan-Visiting-Card">
+          <i class="fas fa-download"></i> Download Visiting Card
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Visiting Card Modal -->
+<div class="modal fade" id="visitingCardModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">My Visiting Card</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="{% static 'images/lic-agent-card.png' %}" 
+             alt="LIC Agent Visiting Card"
+             class="img-fluid"
+             style="max-height: 70vh;">
+      </div>
+      <div class="modal-footer">
+        <a href="{% static 'images/lic-agent-card.png' %}" 
+           class="btn btn-primary"
+           download="LIC-Agent-Avinash-Chauhan-Visiting-Card">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LIC Plans Section -->
+<section class="plans-section py-5" aria-label="LIC Plans">
+  <div class="container">
+    <h2 class="text-center mb-5">LIC Plans</h2>
+    
+    <!-- Plan Categories Table -->
+    <div class="plan-summary mb-5">
+      <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+          <tr>
+            <th>Category</th>
+            <th>Plan Numbers</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Endowment & Savings Plans</td>
+            <td>717, 714, 715, 733, 736, 774, 760, 768, 912, 911</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>Whole Life / Money Back</td>
+            <td>745, 771, 748, 720, 721, 732, 764</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>Term Assurance</td>
+            <td>876, 878, 877, 875, 954, 955, 859</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>Pension / Annuity</td>
+            <td>867, 857, 758, 862, 879</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>ULIP Plans</td>
+            <td>873, 749, 752, 735</td>
+            <td>4</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Plan Benefits Section -->
+    <div class="plan-benefits mb-5">
+      <h3 class="text-center mb-4">Plan Benefits</h3>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <h4>Endowment Plans</h4>
+          <ul>
+            <li>Combination of protection and savings</li>
+            <li>Guanteed maturity benefits</li>
+            <li>Bonus additions</li>
+            <li>Loan facility available</li>
+            <li>Tax benefits under Section 80C & 10(10D)</li>
+          </ul>
+        </div>
+        <div class="benefit-card">
+          <h4>Money Back Policies</h4>
+          <ul>
+            <li>Periodic survival benefits</li>
+            <li>Life cover continues for full term</li>
+            <li>Maturity benefit on survival</li>
+            <li>Bonus additions</li>
+            <li>Ideal for financial milestones</li>
+          </ul>
+        </div>
+        <div class="benefit-card">
+          <h4>Term Insurance</h4>
+          <ul>
+            <li>High life cover at low premium</li>
+            <li>Pure protection plans</li>
+            <li>Flexible term options</li>
+            <li>Rider benefits available</li>
+            <li>Return of premium options</li>
+          </ul>
+        </div>
+        <div class="benefit-card">
+          <h4>Child Plans</h4>
+          <ul>
+            <li>Secure child's future</li>
+            <li>Education/marriage funding</li>
+            <li>Waiver of premium benefit</li>
+            <li>Guaranteed payouts</li>
+            <li>Flexible payout options</li>
+          </ul>
+        </div>
+        <div class="benefit-card">
+          <h4>Pension Plans</h4>
+          <ul>
+            <li>Guaranteed income after retirement</li>
+            <li>Deferred or immediate annuity</li>
+            <li>Flexible premium payment terms</li>
+            <li>Loan facility available</li>
+            <li>Tax benefits under Section 80CCC & 80CCD</li>
+          </ul>
+        </div>
+        <div class="benefit-card">
+          <h4>ULIP Plans</h4>
+          <ul>
+            <li>Combination of investment and insurance</li>
+            <li>Market-linked returns</li>
+            <li>Fund switching options</li>
+            <li>Partial withdrawal facility</li>
+            <li>Transparency in charges</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section py-5" aria-label="Contact Information">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Contact Your LIC Advisor</h2>
+        <div class="contact-methods">
+          <div class="method" itemscope itemtype="https://schema.org/ContactPoint">
+            <i class="fas fa-phone-alt" aria-hidden="true"></i>
+            <h3>Call Direct</h3>
+            <a href="tel:+917620485529" itemprop="telephone">+91 7620485529</a>
+            <p itemprop="hoursAvailable" itemscope itemtype="https://schema.org/OpeningHoursSpecification">
+              <meta itemprop="dayOfWeek" content="Mo,Tu,We,Th,Fr,Sa">
+              9 AM - 6 PM, Monday to Saturday
+            </p>
+          </div>
+          <div class="method">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            <h3>WhatsApp</h3>
+            <a href="https://wa.me/917620485529">Send Message</a>
+          </div>
+          <div class="method">
+            <i class="fas fa-home" aria-hidden="true"></i>
+            <h3>Home Visit</h3>
+            <p>Available in all service areas</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="contact-form">
+          <h3>Quick Inquiry</h3>
+          <form id="inquiryForm" method="post" action="{% url 'contact_submit' %}">
+            {% csrf_token %}
+            <div class="form-group">
+              <label for="name" class="sr-only">Your Name</label>
+              <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <label for="phone" class="sr-only">Phone Number</label>
+              <input type="tel" id="phone" name="phone" class="form-control" placeholder="Phone Number" required>
+            </div>
+            <div class="form-group">
+              <label for="location" class="sr-only">Select Location</label>
+              <select id="location" name="location" class="form-control" required>
+                <option value="">Select Location</option>
+                <option value="Virar">Virar</option>
+                <option value="Vasai">Vasai</option>
+                <option value="Nallasopara">Nallasopara</option>
+                <option value="Naigaon">Naigaon</option>
+                <option value="Bhayandar">Bhayandar</option>
+                <option value="Mira Road">Mira Road</option>
+                <option value="Dahisar">Dahisar</option>
+                <option value="Borivali">Borivali</option>
+                <option value="Palghar">Palghar</option>
+                <option value="Mumbai">Mumbai</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="plan_interest" class="sr-only">Select Plan (Optional)</label>
+              <select id="plan_interest" name="plan_interest" class="form-control">
+                <option value="">Select Plan (Optional)</option>
+                <optgroup label="Endowment & Savings Plans">
+                  <option value="717 - Single Premium Endowment">717 - Single Premium Endowment</option>
+                  <option value="714 - New Endowment Plan">714 - New Endowment Plan</option>
+                  <option value="715 - New Jeevan Anand">715 - New Jeevan Anand</option>
+                  <option value="733 - Jeevan Lakshya">733 - Jeevan Lakshya</option>
+                  <option value="736 - Jeevan Labh">736 - Jeevan Labh</option>
+                  <option value="774 - Amritbaal">774 - Amritbaal</option>
+                  <option value="760 - Bima Jyoti">760 - Bima Jyoti</option>
+                  <option value="768 - Jeevan Azad">768 - Jeevan Azad</option>
+                  <option value="912 - Nav Jeevan Shree (Regular)">912 - Nav Jeevan Shree (Regular)</option>
+                  <option value="911 - Nav Jeevan Shree (Single)">911 - Nav Jeevan Shree (Single)</option>
+                </optgroup>
+                <optgroup label="Whole Life / Money Back">
+                  <option value="745 - Jeevan Umang">745 - Jeevan Umang</option>
+                  <option value="771 - Jeevan Utsav">771 - Jeevan Utsav</option>
+                  <option value="748 - Bima Shree">748 - Bima Shree</option>
+                  <option value="720 - New Money Back (20Y)">720 - New Money Back (20Y)</option>
+                  <option value="721 - New Money Back (25Y)">721 - New Money Back (25Y)</option>
+                  <option value="732 - Children's Money Back">732 - Children's Money Back</option>
+                  <option value="764 - Bima Ratna">764 - Bima Ratna</option>
+                </optgroup>
+                <optgroup label="Term Assurance">
+                  <option value="876 - Digi Term">876 - Digi Term</option>
+                  <option value="878 - Digi Credit Life">878 - Digi Credit Life</option>
+                  <option value="877 - Yuva Credit Life">877 - Yuva Credit Life</option>
+                  <option value="875 - Yuva Term">875 - Yuva Term</option>
+                  <option value="954 - New Tech-Term">954 - New Tech-Term</option>
+                  <option value="955 - New Jeevan Amar">955 - New Jeevan Amar</option>
+                  <option value="859 - Saral Jeevan Bima">859 - Saral Jeevan Bima</option>
+                </optgroup>
+                <optgroup label="Pension / Annuity">
+                  <option value="867 - New Pension Plus">867 - New Pension Plus</option>
+                  <option value="857 - Jeevan Akshay-VII">857 - Jeevan Akshay-VII</option>
+                  <option value="758 - New Jeevan Shanti">758 - New Jeevan Shanti</option>
+                  <option value="862 - Saral Pension">862 - Saral Pension</option>
+                  <option value="879 - Smart Pension">879 - Smart Pension</option>
+                </optgroup>
+                <optgroup label="ULIP Plans">
+                  <option value="873 - Index Plus">873 - Index Plus</option>
+                  <option value="749 - Nivesh Plus">749 - Nivesh Plus</option>
+                  <option value="752 - SIIP">752 - SIIP</option>
+                  <option value="735 - New Endowment Plus">735 - New Endowment Plus</option>
+                </optgroup>
+              </select>
+            </div>
+<button type="submit" class="btn btn-primary btn-block" onclick="window.location.href='tel:7620485529'">Contact Us</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/main.js' %}"></script>
+{% endblock %}
