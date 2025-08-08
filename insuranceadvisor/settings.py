@@ -4,7 +4,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SECRET_KEY', 'change-me-in-env')  # Keep secret in Render ENV
-DEBUG = True
+DEBUG = os.getenv('DEBUG', 'False') == 'True'  # False in production
 
 ALLOWED_HOSTS = [
     'www.insuranceadvisornearme.com',
@@ -12,6 +12,15 @@ ALLOWED_HOSTS = [
     'insurance-advisor-near-me-7v6l.onrender.com',
     'localhost',
 ]
+
+# Security settings for production
+if not DEBUG:
+    SECURE_HSTS_SECONDS = 31536000  # 1 year
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+    SECURE_HSTS_PRELOAD = True
+    SECURE_SSL_REDIRECT = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -91,14 +100,14 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Email settings (from environment variables)
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = os.getenv('insuranceadvisornearme')
-EMAIL_HOST_PASSWORD = os.getenv('insuranceadvisornearme7620485529')
-DEFAULT_FROM_EMAIL = os.getenv('insuranceadvisornearme@gmail.com')
-CONTACT_EMAIL = os.getenv('CONTACT_EMAIL', os.getenv('insuranceadvisornearme@gmail.com'))
+EMAIL_BACKEND = os.getenv('EMAIL_BACKEND', 'django.core.mail.backends.smtp.EmailBackend')
+EMAIL_HOST = os.getenv('EMAIL_HOST', 'smtp.gmail.com')
+EMAIL_PORT = int(os.getenv('EMAIL_PORT', '587'))
+EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS', 'True') == 'True'
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
+DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL', EMAIL_HOST_USER)
+CONTACT_EMAIL = os.getenv('CONTACT_EMAIL', DEFAULT_FROM_EMAIL)
 
 # SEO Settings
 SEO_SITE_NAME = "LIC Insurance Advisor - Avinash Chauhan"
@@ -130,3 +139,6 @@ LOCAL_BUSINESS_HOURS = "Mo-Sa 09:00-18:00"
 LOCAL_BUSINESS_LOGO = f"{SEO_BASE_URL}/static/images/lic-logo.png"
 
 SITE_ID = 1
+
+# Custom 404 handler
+handler404 = 'advisor.views.custom_404'
