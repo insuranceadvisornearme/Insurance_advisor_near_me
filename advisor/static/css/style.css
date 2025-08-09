@@ -85,9 +85,7 @@ a {
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(rgba(0, 86, 179, 0.9), rgba(0, 86, 179, 0.9)), url('../images/insurance-bg.jpg');
-  background-size: cover;
-  background-position: center;
+  background: #003366;
   color: white;
   padding: 5rem 0;
   text-align: center;
@@ -350,28 +348,27 @@ a {
   }
 }
 
- .contact-form select {
-    height: 50px !important;
-    padding: 10px 15px !important;
-    font-size: 16px !important;
-  }
-  
-  .contact-form optgroup {
-    font-size: 16px !important;
-  }
-  
-  .contact-form option {
-    font-size: 15px !important;
-    padding: 8px 10px !important;
-  }
-  
-  /* Make the form container slightly larger */
-  .contact-form {
-    padding: 25px;
-    background: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  }
+.contact-form select {
+  height: 50px !important;
+  padding: 10px 15px !important;
+  font-size: 16px !important;
+}
+
+.contact-form optgroup {
+  font-size: 16px !important;
+}
+
+.contact-form option {
+  font-size: 15px !important;
+  padding: 8px 10px !important;
+}
+
+.contact-form {
+  padding: 25px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
 
 /* About Section - Mobile Responsive Adjustments */
 @media (max-width: 768px) {
@@ -380,116 +377,40 @@ a {
   }
   
   .agent-photo-container {
-    margin: 0 auto 2rem; /* Centers the container horizontally */
-    max-width: 300px; /* Slightly smaller for mobile */
+    margin: 0 auto 2rem;
+    max-width: 300px;
   }
   
   .visiting-card {
-    right: 0; /* Adjust position for smaller screens */
-    bottom: -60px; /* Slightly lower to avoid overlap */
-
-   width: 220px; 
-   height: 150px;
+    right: 0;
+    bottom: -60px;
+    width: 220px; 
+    height: 150px;
   }
   
   .about-section .col-md-7 {
-    text-align: center; /* Center text on mobile */
+    text-align: center;
   }
   
   .agent-details {
-    text-align: left; /* Keep details left-aligned inside centered container */
+    text-align: left;
   }
 }
 
 @media (max-width: 768px) {
   .agent-photo {
-    border-radius: 50%; /* Makes image circular */
-    width: 300px; /* Fixed size */
-   
-    object-fit: cover; /* Ensures image fills circle */
+    border-radius: 50%;
+    width: 300px;
+    object-fit: cover;
     display: block;
-    margin: 0 auto; /* Centers the image */
+    margin: 0 auto;
   }
-}
-
-/* Hero Section - Updated Styles */
-.hero-section {
-  background: #003366; /* Dark blue background */
-  color: #FFD700; /* Dark yellow text color */
-  padding: 5rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Optional: Add a subtle pattern or gradient to the dark blue */
-.hero-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 
-    linear-gradient(135deg, rgba(0,51,102,0.8) 0%, rgba(0,40,85,0.9) 100%),
-    url('../images/insurance-bg.jpg') center/cover no-repeat;
-  opacity: 0.9;
-  z-index: -1;
-}
-
-.hero-section h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: #FFD700; /* Dark yellow */
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-}
-
-.hero-section .tagline {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-  font-weight: 300;
-  color: white; /* White for the tagline */
-}
-
-/* CTA Buttons - Keep WhatsApp as is, modify primary button */
-.cta-buttons .btn-primary {
-  background-color: #FFD700; /* Dark yellow */
-  color: #003366; /* Dark blue text */
-  border: 2px solid #FFD700;
-  font-weight: 600;
-}
-
-.cta-buttons .btn-primary:hover {
-  background-color: #e6c200; /* Slightly darker yellow */
-  border-color: #e6c200;
-  color: #003366;
-}
-
-/* Keep WhatsApp button exactly as is */
-.cta-buttons .btn-whatsapp {
-  background-color: #25D366;
-  color: white;
-  border: 2px solid #25D366;
-}
-
-.cta-buttons .btn-whatsapp:hover {
-  background-color: #1da851;
-  border-color: #1da851;
-  color: white;
 }
 
 /* Responsive adjustments for hero section */
 @media (max-width: 768px) {
   .hero-section {
     padding: 3rem 0;
-  }
-  
-  .hero-section h1 {
-    font-size: 2rem;
-  }
-  
-  .hero-section .tagline {
-    font-size: 1.25rem;
   }
   
   .cta-buttons {
@@ -502,16 +423,17 @@ a {
     margin: 0.5rem 0;
   }
 }
-/* Service Areas Section - Updated without Yellow Hover */
+
+/* Service Areas Section */
 .service-areas {
   padding: 4rem 0;
-  background: #f8f9fa; /* Solid light background */
+  background: #f8f9fa;
 }
 
 .service-areas h2 {
   text-align: center;
   margin-bottom: 3rem;
-  color: #003366; /* Dark blue */
+  color: #003366;
   font-size: 2.2rem;
   position: relative;
 }
@@ -524,7 +446,7 @@ a {
   transform: translateX(-50%);
   width: 80px;
   height: 3px;
-  background: #003366; /* Dark blue underline */
+  background: #003366;
   border-radius: 3px;
 }
 
@@ -549,7 +471,7 @@ a {
 .area-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 51, 102, 0.12);
-  border-color: #003366; /* Dark blue border on hover */
+  border-color: #003366;
 }
 
 .area-card a {
@@ -563,7 +485,7 @@ a {
 }
 
 .area-card i {
-  color: #003366; /* Dark blue icon */
+  color: #003366;
   font-size: 2rem;
   background: rgba(0, 51, 102, 0.05);
   width: 60px;
@@ -576,7 +498,7 @@ a {
 }
 
 .area-card:hover i {
-  background: rgba(0, 51, 102, 0.1); /* Slightly darker blue on hover */
+  background: rgba(0, 51, 102, 0.1);
   color: #003366;
 }
 
@@ -585,43 +507,7 @@ a {
   transition: color 0.3s ease;
 }
 
-/* Remove all yellow/gold color references */
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .service-areas {
-    padding: 3rem 0;
-  }
-  
-  .service-areas h2 {
-    font-size: 1.8rem;
-    margin-bottom: 2rem;
-  }
-  
-  .area-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .area-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .area-card {
-    padding: 1.25rem;
-  }
-  
-  .area-card i {
-    width: 50px;
-    height: 50px;
-    font-size: 1.5rem;
-  }
-}
-
-
-/* About Section - Updated Styles */
+/* About Section */
 .about-section {
   position: relative;
 }
@@ -643,7 +529,6 @@ a {
   box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
 
-/* Download Button Styles */
 .btn-outline-primary {
   display: inline-flex;
   align-items: center;
@@ -657,27 +542,6 @@ a {
 .btn-outline-primary:hover {
   background-color: #003366;
   color: white;
-}
-
-/* Modal Styles */
-.modal-content {
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.modal-header {
-  background-color: #003366;
-  color: white;
-  border-bottom: none;
-}
-
-.modal-title {
-  font-weight: 600;
-}
-
-.modal-footer {
-  border-top: none;
-  background-color: #f8f9fa;
 }
 
 /* Responsive Adjustments */
@@ -695,7 +559,7 @@ a {
   }
 }
 
-/* White Header Styles */
+/* Header Styles */
 .main-header {
   position: sticky;
   top: 0;
@@ -753,18 +617,6 @@ a {
   color: #0056b3;
 }
 
-.btn-primary {
-  background-color: #0056b3;
-  border-color: #0056b3;
-  transition: all 0.3s ease;
-}
-
-.btn-primary:hover {
-  background-color: #004494;
-  border-color: #004494;
-  transform: translateY(-2px);
-}
-
 /* Responsive Adjustments */
 @media (max-width: 992px) {
   .navbar-collapse {
@@ -784,4 +636,3 @@ a {
     margin-top: 0.5rem;
   }
 }
-
